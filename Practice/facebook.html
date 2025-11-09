@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form in Table</title>
+    <style>
+      table,
+      tr,
+      td,
+      th {
+        background-color: aliceblue;
+        color: black;
+        padding: 10px;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+      }
+      button{
+        width: 100%;
+        height: 40px;
+        border: 1px solid white;
+        border-radius: 10px;
+        background-color: rgb(54, 143, 37);
+        cursor: pointer;
+      }
+    button:hover {
+        background: #4374bd;
+    }
+    
+    input[type="email"],
+    input[type="password"]{
+      width: 100%;
+      box-sizing: border-box;
+    }
+    select{
+        width: 30%;
+    }
+    #male,#female{
+        padding-left: 40px;
+    }
+    input[type="radio"]{
+        width: 15%;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <table>
+          <tr>
+            <th colspan="2" style="font-size: larger;color: rgb(52, 148, 226);"><h1>Facebook</h1></th>
+          </tr>
+          <tr>
+            <th colspan="2">
+              <h2>Create a new account</h2>
+              <p>It's quick and easy.</p>
+            </th>
+          </tr>
+
+          <tr>
+            <td colspan="2">
+              <input type="text" id="fname" name="fname" placeholder="First Name" />
+              <input type="text" id="sname" name="sname" placeholder="Surname" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="box-sizing: border-box">
+              <input type="email" id="mail" name="mail" placeholder="Mobile number or E-mail address" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="password" name="password" placeholder="New Password" />
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2">
+              <select>
+                <option value="Day">Day</option>
+                <option value="Day">1</option>
+                <option value="Day">2</option>
+                <option value="Day">3</option>
+              </select>
+              <select>
+                <option value="Month">Month</option>
+                <option value="January">Jan</option>
+                <option value="February">Feb</option>
+                <option value="March">Mar</option>
+              </select>
+              <select>
+                <option value="Year">Year</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td >
+              <label for="Gender">Gender:</label><br />
+
+              <label id="male" for="male">Male</label>
+              <input type="radio" id="male" name="gender" />
+
+              <label id="female" for="female">Female</label>
+              <input type="radio" id="female" name="gender" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center;">By clicking Sign Up. You Agree to or terms.</td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center">
+              <button type="submit" value="Sign Up">Sign Up</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
