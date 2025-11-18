@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<p id="demo"></p>
+<script>
+
+    function largeNumber(arr){
+        var num=arr;
+        var max=num[0];
+        for(var i=0;i<num.length;i++){
+            if(num[i]>max){
+                max=num[i];
+            }
+        }
+        return max;
+    }
+    var large=largeNumber([10,20,30,65,8,9,5,55]);
+    document.getElementById("demo").innerHTML=large;
+
+</script>
+</body>
+</html>

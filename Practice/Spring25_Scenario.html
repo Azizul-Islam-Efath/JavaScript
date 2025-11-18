@@ -1,0 +1,136 @@
+<!-- registration.html -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Event Registration</title>
+<style>
+  :root {
+    font-family: system-ui, Arial, sans-serif;
+    --max-width: 700px;
+    --gap: 12px;
+  }
+
+  body {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background: #f6f7fb;
+  }
+
+  .card {
+    width: 100%;
+    max-width: var(--max-width);
+    background: #8385a0;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  h1 { margin-top: 0; font-size: 1.25rem; }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap);
+  }
+
+  label { font-size: 1.20rem; margin-bottom: 4px; display:block; }
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d6d9e6;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+  }
+
+  .checkboxes {
+    display:flex;
+    gap: 12px;
+    flex-wrap:wrap;
+  }
+
+  .row {
+    display:flex;
+    gap: var(--gap);
+    align-items:center;
+  }
+
+  .actions {
+    display:flex;
+    justify-content:flex-end;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  button {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  }
+  button:hover{
+    background-color: #5f9e90;
+  }
+
+  .btn-primary { background:#2c4a8b; color:white; }
+  .btn-secondary { background:#eef2ff; color:#1f2937; }
+
+  @media (min-width: 640px) {
+    .grid-2 { grid-template-columns: 1fr 1fr; gap: var(--gap); }
+  }
+</style>
+</head>
+<body>
+  <form class="card" method="post" action="/register">
+    <h1>Event Registration</h1>
+
+    <div class="grid grid-2">
+      <div>
+        <label for="name">Participant Name</label>
+        <input id="name" name="name" type="text" required placeholder="Full name" />
+      </div>
+
+      <div>
+        <label for="email">Contact Email</label>
+        <input id="email" name="email" type="email" required placeholder="you@example.com" />
+      </div>
+
+      <div>
+        <label for="date">Date of Attendance</label>
+        <input id="date" name="date" type="date" required />
+      </div>
+
+      <div>
+        <label for="session">Preferred Session</label>
+        <select id="session" name="session">
+          <option value="morning">Morning Session</option>
+          <option value="afternoon">Afternoon Session</option>
+          <option value="evening">Evening Session</option>
+        </select>
+      </div>
+    </div>
+
+    <fieldset style="margin-top:12px; border:none; padding:0;">
+      <legend style="font-weight:600; margin-bottom:6px;">Session Preferences</legend>
+      <div class="checkboxes">
+        <label><input type="checkbox" name="prefs" value="workshop" /> Workshop</label>
+        <label><input type="checkbox" name="prefs" value="network" /> Networking</label>
+        <label><input type="checkbox" name="prefs" value="qna" /> Q&A</label>
+      </div>
+    </fieldset>
+
+    <div class="actions">
+      <button type="reset" class="btn-secondary">Reset</button>
+      <button type="submit" class="btn-primary">Register</button>
+    </div>
+  </form>
+</body>
+</html>

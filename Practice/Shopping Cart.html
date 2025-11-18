@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        function filterbyPrice(arr,min){
+            var price=arr;
+            var Min=min;
+            var newarr=[];
+            var i;
+            for(i=0;i<price.length;i++){
+                if(price[i]>Min){
+                    newarr.push(price[i]);
+                }
+            }
+            return newarr;
+        }
+
+        var output=filterbyPrice([10,25,8,42,15,5],20);
+        document.getElementById("demo").innerHTML="["+output+"]";
+    </script>
+</body>
+</html>
