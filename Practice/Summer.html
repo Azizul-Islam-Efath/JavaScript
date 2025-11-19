@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+
+        function concate(str1,str2){
+            var Str1=str1.toUpperCase().replace(/ /g,'_');
+            var Str2=str2.toLowerCase().replace(/ /g,'_');
+            var New=Str1+"-"+Str2;
+            document.getElementById('demo').innerHTML=New;
+        }
+
+        concate("Hello World","GOOD Morning");
+    </script>
+
+</body>
+</html>
