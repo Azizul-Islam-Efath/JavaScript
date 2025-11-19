@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <p id="demo"></p>
+    <script>
+      function Calculate() {
+        var coffeePrice = 5;
+        var coffeeQuantity = 2;
+        var pastryPrice = 3.5;
+        var pastryQuantity = 1;
+
+        var totalcoffeePrice = coffeePrice * coffeeQuantity;
+        var totalpastryPrice = pastryPrice * pastryQuantity;
+        var totalCost = totalcoffeePrice + totalpastryPrice;
+
+        document.getElementById("demo").innerHTML ="The total cost of your order is $" + totalCost;
+      }
+      Calculate();
+    </script>
+  </body>
+</html>
