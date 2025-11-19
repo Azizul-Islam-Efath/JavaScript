@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      function vowels(word) {
+        var str = word.toLowerCase();
+        var i,
+          count = 0;
+        for (i = 0; i < str.length; i++) {
+          if (
+            str[i] === "a" ||
+            str[i] === "e" ||
+            str[i] === "i" ||
+            str[i] === "o" ||
+            str[i] === "u")
+         {
+            count++;
+          }
+        }
+        return count;
+      }
+
+      var total = vowels("Azizul islam Efath!");
+      document.getElementById("demo").innerHTML = total;
+    </script>
+  </body>
+</html>
