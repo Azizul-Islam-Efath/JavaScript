@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Objects</h1>
+
+<p id="demo"></p>
+<p id="d">Available products:</p>
+
+<script>
+
+const products=[
+{    id:1,
+    name:"Shirt",
+    price:100,
+    stock:true
+},
+{    id:2,
+    name:"Pant",
+    price:500,
+    stock:false
+},
+{    id:5,
+    name:"Sweater",
+    price:1000,
+    stock:true
+}
+]
+
+products.forEach(e=>{
+    if(e.stock==true && e.price>100){
+        document.getElementById("demo").innerHTML+=e.name +"<br>";       
+    }
+});
+
+</script>
+
+</body>
+</html>
