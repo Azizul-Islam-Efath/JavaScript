@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>JavaScript Objects</h1>
+    <p id="demo"></p>
+    <script>
+
+        const universityData = {
+            dept: "Software Engineering",
+            students: [
+                { id: 301, name: "Anvir", grades: { cgpa: 3.8, credits: 60 } },
+                { id: 302, name: "Anik", grades: { cgpa: 3.81, credits: 45 } },
+                { id: 305, name: "Azizul", grades: { cgpa: 3.72, credits: 55 } }
+            ]
+        };
+        function getstudentStatus() {
+
+            const info = universityData.students;
+
+            let maxCgpa = info[0].grades.cgpa;
+            let name = info[0].name;
+            for (let i = 0; i < info.length; i++) {
+                if (info[i].grades.cgpa > maxCgpa) {
+                    maxCgpa = info[i].grades.cgpa;
+                    name = info[i].name;
+                }
+            }
+            return "Student " + name + " has the max CGPA.";
+
+        }
+        const print = getstudentStatus();
+        document.getElementById("demo").innerHTML = print;
+
+    </script>
+
+</body>
+
+</html>
