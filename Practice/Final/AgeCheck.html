@@ -1,1 +1,24 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        function age(age){
+            if(age<=18){
+                return "Sorry, You are not old enogh to watch this movie.";
+            }else{
+                return "Welcome!You are old enogh to watch this movie.";
+            }
+        }
+        var first=age(19);
+        var second=age(10);
+        document.getElementById("demo").innerHTML=first+"<br>"+second;
+</script>
+</body>
+</html>
